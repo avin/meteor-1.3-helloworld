@@ -1,22 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import Routes from './Routes.jsx';
+
 import AppHeader from './AppHeader/AppHeader.jsx';
 import AppFooter from './AppFooter/AppFooter.jsx';
-import HomePage from '../Home/HomePage.jsx';
 
-App = React.createClass({
-    render(){
+
+export default class extends React.Component {
+    render() {
         return (
             <div>
                 <AppHeader />
-                <HomePage />
+
+                {this.props.children}
+
                 <AppFooter />
             </div>
         )
     }
-});
+};
 
 Meteor.startup(() => {
-    ReactDOM.render(<App />, document.getElementById('App'));
+    ReactDOM.render(<Routes />, document.getElementById('App'));
 });
