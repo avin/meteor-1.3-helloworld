@@ -4,7 +4,7 @@ import {Router, Route, Link, IndexRoute, browserHistory} from 'react-router';
 
 import App from './App.jsx';
 import HomePage from '../Home/HomePage.jsx';
-import Tasks from '../Tasks/Tasks.jsx';
+import TaskPage from '../Tasks/TaskPage.jsx';
 
 
 export default () => (
@@ -12,7 +12,7 @@ export default () => (
         <Route path="/" component={App}>
             <IndexRoute component={HomePage}/>
             <Route path="home" component={HomePage}/>
-            <Route path="tasks" component={Tasks}/>
+            <Route path="tasks" component={TaskPage}/>
         </Route>
     </Router>
 )
